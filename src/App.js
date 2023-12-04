@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { useState ,useEffect} from 'react';
+import PhotoWall from './components/PhotoWall';
+import Title from './components/Title';
+import AddPhoto from './components/AddPhoto';
+import {Switch,Route} from 'react-router-dom';
+import { removePost } from './redux/actions';
+import Single from './components/Single';
+function App(props) {
+  useEffect(() => {
+    // Dispatch the action when the component mounts
+    props.startLoadingPost();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+     <Route exact path="/" render={()=>(
+      <>
+        <Title/>
+        <PhotoWall {...props}  />
+        </>
+        )}/>  
+        
+          <Route path="/AddPhoto" render={({history})=>(
+            <AddPhoto {...props} onHistory={history}/>
+  )}
+          />
+    <Route path="/single/:id" render={(params)=>(
+      <Single  {...props} {...params}/>
+    )}>
+
+    </Route>
+          
+    </Switch>
     </div>
   );
 }

@@ -1,0 +1,229 @@
+html{
+    font-size: 10px;
+    font-family: sans-serif;
+}
+p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+h1{
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 13rem;
+    font-weight: 100;
+    margin: 2rem 0;
+    letter-spacing: -1px;
+    color: black;
+}
+.photoGrid{
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.figure{
+    /* border: 1px solid #d3d3d3; */
+    flex-basis: calc(33.333% - 4rem);
+    padding: 2rem;
+    flex-grow: 1;
+    margin: 0 2rem 2rem 2rem;
+}
+.photo{
+    width: 100%;
+    margin: -2rem 0rem 0rem -2rem;
+
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    flex-basis: 50%;
+    color: red;
+    font-size: 15px;
+    border: 2px solid #f2f2f2;
+    line-height: 2;
+    padding: 5px;
+}
+
+.addIcon{
+    margin: 20px auto;
+    display: table;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #3498db; /* Set your preferred background color */
+    color: #fff; /* Set your preferred text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    
+}
+.form{
+    background:white;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 45px;
+    text-align: center;
+}
+
+.form input{
+    font-family: sans-serif;
+    background: #f2f2f2;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+
+.form button{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    background: #065784;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background: #7b8589;
+}
+
+button:hover{
+    border-color: blue;
+}
+
+.comment-count{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.loader{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    font-size: 28pt;
+}
+.single-photo{
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.comment{
+    width: 100%;
+    flex-basis: calc(10% - 4rem);
+    padding: 2rem;
+    flex-grow: 1;
+    margin: 0 2rem 2rem 2rem;
+    
+}
+.comment-form{
+    background:white;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.comment-form input[type=text],input[type=submit]{
+    font-family: sans-serif;
+    background: #f2f2f2;
+    /* width: 100%; */
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+.comment-button{
+    flex-basis: 50%;
+    color: red;
+    font-size: 15px;
+    border: 2px solid #f2f2f2;
+    line-height: 2;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+.comment-button:hover{
+    background: #7b8589;
+}
+
+.comment-button:hover{
+    border-color: blue;
+}
+.speech-bubble{
+    width: 10px;
+    margin: 10px auto;
+    background: gray;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    font-family: arial;
+    position:relative;
+    border-radius: 50%;
+}
+.speech-bubble:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid gray;
+    border-right: 10px solid transparent;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid transparent;
+    right: -20px;
+    top: 6px;
+  }
+  .speech-bubble:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 7px solid #fff;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+    border-bottom: 7px solid transparent;
+    right: -11px;
+    top: 10px;
+  }
+  .loading-spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
